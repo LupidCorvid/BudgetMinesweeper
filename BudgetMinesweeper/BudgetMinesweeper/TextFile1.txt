@@ -1,0 +1,8 @@
+﻿Changelog
+
+5/1/25
+	Created file
+	Created DigSpot class with bare implementation
+	Created setup for form (mostly)
+	Validation checks for game length and width
+	When starting the game, a single digSpot spawns. This can be build upon to create the board.
