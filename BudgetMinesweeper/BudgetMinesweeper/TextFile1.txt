@@ -6,3 +6,8 @@
 	Created setup for form (mostly)
 	Validation checks for game length and width
 	When starting the game, a single digSpot spawns. This can be build upon to create the board.
+
+5/4/25
+	length * width mines will appear on the board when you click "start game"
+	Created a class for the game board
+	The game board will disappear when you click reset game

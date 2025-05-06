@@ -12,7 +12,7 @@ namespace BudgetMinesweeper
     {
         int ID;
         string label; //What shows to the player
-        int mine;
+        int mine; //The hidden number underneath. -1 is a mine
         bool isDug;
         int posX; int posY;
         int len = 25;
@@ -35,6 +35,7 @@ namespace BudgetMinesweeper
                 Location = new Point(posX, posY)
             };
         }
+
         public int GetID(){ return ID; }
         public void SetID(int newID) { ID = newID; }
         public void SetMineLabel()
