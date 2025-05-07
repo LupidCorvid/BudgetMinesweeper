@@ -1,0 +1,15 @@
+20 rows
+20 columns
+
+400 spaces
+120 mines
+
+6 mines per row
+
+1/10 chance averages 2 mines per row
+
+if we do half mpr, 1/3 chance averages 6 mines per row
+
+It needs to be more than half mpr. So 75% mpr
+
+3/4 chance averages 4 mpr. That's better

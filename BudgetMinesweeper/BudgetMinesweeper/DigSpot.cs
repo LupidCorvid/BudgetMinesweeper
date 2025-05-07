@@ -18,6 +18,10 @@ namespace BudgetMinesweeper
         int len = 25;
         int width = 25;
         public Button theButton;
+        int textColor = 1; //Start with blank color, 0 is red
+        Color[] colors = { Color.Red, Color.White, Color.Blue, Color.Green, Color.LightCoral,
+            Color.Purple, Color.DarkBlue, Color.Teal, Color.Black, Color.Gray};
+        int currColor = 1;
 
         public DigSpot(int givenID, int givenMine, int x, int y)
         {
@@ -26,13 +30,15 @@ namespace BudgetMinesweeper
             mine = givenMine;
             isDug = false;
             posX = x; posY = y;
+            currColor = 1;
 
             theButton = new Button()
             {
                 Tag = ID,
                 Text = label,
                 Size = new Size(len, width),
-                Location = new Point(posX, posY)
+                Location = new Point(posX, posY),
+                ForeColor = colors[1]
             };
         }
 
@@ -45,9 +51,21 @@ namespace BudgetMinesweeper
                 label = "!";
             }
         }
+        public int getMineValue() { return mine; }
+        public void setMineValue(int value) { mine = value; }
+
         public void RevealMine()
         {
 
+        }
+        public void IncrementColor() {
+            currColor++;
+            theButton.ForeColor = colors[currColor];
+        }
+        public void DecrementColor()
+        {
+            currColor--;
+            theButton.ForeColor = colors[currColor];
         }
     }
 }
